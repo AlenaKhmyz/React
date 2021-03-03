@@ -1,0 +1,23 @@
+.fontSize {
+    font-size: 50px;
+    font-weight: lighter;
+    font-variant: small-caps;
+    color: blue;
+}
+
+.color {
+    font-size: 50px;
+    font-weight: lighter;
+    font-variant: small-caps;
+    color:#430f74
+}
+
+.fontFamily {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    color: red;
+}
+
+.underline {
+    text-decoration: underline;
+}

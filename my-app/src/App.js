@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import './components/task1';
+import Checkbox from './components/task2';
+import Click from './components/task3';
+import TodoList from './components/task4';
+import Animation from './components/task5';
+import Button from './components/task6';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Checkbox />
+      <Click />
+      <TodoList />
+      <Animation />
+      <Button name={true}/>
+      <Button name={false}/>
     </div>
   );
 }
