@@ -8,7 +8,7 @@ class Animation extends React.Component {
     }
 
     changeState = () => {
-        this.setState ({btn: this.state.btn ? <button>Load</button> : <button className="loader"></button>})
+        this.state.btn ? this.setState ({btn: false}) : this.setState({btn: true})
     }
     
 

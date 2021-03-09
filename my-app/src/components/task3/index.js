@@ -10,7 +10,15 @@ class Click extends React.Component {
         value: state1
     }
     
-    change = () => this.state.value === state1 ? this.setState({value: state2}) : this.setState({value: state3})
+    change = () => {
+        if (this.state.value === state1) {
+            this.setState ({value: state2})
+        } else if (this.state.value === state2) {
+            this.setState ({value: state3})
+        } else if (this.state.value === state3) {
+            this.setState ({value: state1})
+        }
+    }
 
     render () {
         return <div onClick = {this.change}>

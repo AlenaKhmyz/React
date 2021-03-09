@@ -3,7 +3,11 @@ import React from 'react';
 class TodoList extends React.Component {
 
     state = {
-        tasks: ['learn react', 'call friend', 'play guitar']
+        tasks: [
+            {text: 'learn react', id: 'first'},
+            {text: 'call friend', id: 'second'},
+            {text: 'play guitar', id: 'third'}
+        ]
     }
 
     onAddTask = () => {
@@ -16,7 +20,7 @@ class TodoList extends React.Component {
         return (
             <div>
                 { this.state.tasks.map((item) => {
-                    return <div>{item}</div>
+                    return <div key={item.id}>{item.text}</div>
                 })}
                 <button onClick={this.onAddTask}>add task</button>
             </div>

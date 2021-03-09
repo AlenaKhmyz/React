@@ -3,23 +3,20 @@ import ReactDOM from 'react-dom';
 import './styles.css'
 
 
-const P = ({name, clName, underline}) => {
-        return (<div className ={clName} style = {underline ? {textDecoration: 'underline'} : {textDecoration: 'none'}}>
-        {name}
-        </div>)
-    }
-    
-ReactDOM.render(
-    <>
+const P = (props) => { 
+    const Underline = props.textDecoration ? 'underline' : undefined
+    return <p style= {{fontSize: props.size, color: props.color, textDecoration: Underline, fontFamily: props.fontFamily}}>Mur</p>
+  } 
+  
+  
+  ReactDOM.render(
     <div>
-        <P name="Mur" clName="fontSize"/>
-        <P name="Miw" clName="color" />
-        <P name="Cat" clName="fontFamily" underline/>
-        <P name="Says" clName="underline"/>
+      <P size='50px' />
+      <P color='red'/>
+      <P fontFamily='serif'/>
+      <P textDecoration={true} />
     </div>,
-    
-    </>,
     document.getElementById('root')
-);
+  );
 
 export default P;
