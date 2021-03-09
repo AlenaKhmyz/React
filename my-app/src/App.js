@@ -1,25 +1,61 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import ConditionalRendering from './components/hw3'
+import DoubleSidedBinding from './components/hw4'
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <button> <Link to="/">ConditionalRendering</Link> </button>
+            </li>
+            <li>
+              <button> <Link to="/Ex2">DoubleSidedBinding</Link> </button>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+
+          <Route path="/hw3">
+            <Task3 />
+          </Route>
+
+          <Route path="/hw4">
+            <Task4 />
+          </Route>
+            
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Task3() {
+  return (
+    <div className = 'content'>
     </div>
   );
 }
 
-export default App;
+function Task4() {
+  return (
+    <div className = 'content'>
+    </div>
+  );
+}
