@@ -1,0 +1,13 @@
+.navbar {
+    height: 10vh;
+    background-color: rgba(86, 0, 185, 0.5);
+}
+
+.link {
+    color: rgb(216, 211, 211);
+    padding: 100px;
+}
+
+.link:hover {
+    color: rgb(86, 0, 185);
+}

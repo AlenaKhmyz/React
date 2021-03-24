@@ -1,0 +1,10 @@
+.container {
+    padding: 100px;
+    height: 100vh;
+    text-align: center;
+    background-color:rgba(0, 185, 106, 0.5);
+}
+
+.name {
+    color:rgba(86, 0, 185, 0.5);
+}
